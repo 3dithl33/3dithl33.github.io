@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Resumé
-permalink: /resume/
+title: CV
+permalink: /cv/
 ---
 
-## Resumé
+## Education
+
