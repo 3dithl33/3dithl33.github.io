@@ -4,22 +4,38 @@ title: Blog
 ---
 {% assign cats = site.categories | sort %}
 <div class="blog-index">
-  <nav class="blog-index__side">
+  <aside class="blog-index__side">
     <strong>Categories</strong>
     <ul>
-    {% for cat in cats %}
-      <li><a href="#{{ cat[0] | slugify }}">{{ cat[0] }}</a> </li>
-    {% endfor %}
+      <li><a href="#" data-cat="all" class="active">All</a></li>
+      {% for cat in cats %}
+      <li><a href="#" data-cat="{{ cat[0] | slugify }}">{{ cat[0] }}</a></li>
+      {% endfor %}
     </ul>
-  </nav>
+  </aside>
+
   <div class="blog-index__main">
-  {% for cat in cats %}
-    <h2 id="{{ cat[0] | slugify }}">{{ cat[0] }}</h2>
     <ul>
-    {% for post in cat[1] %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> · {{ post.date | date: "%-d %b %Y" }}</li>
+    {% for post in site.posts %}
+      <li class="blog-index__post" data-cats="{% for c in post.categories %}{{ c | slugify }} {% endfor %}">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> · {{ post.date | date: "%-d %b %Y" }}
+      </li>
     {% endfor %}
     </ul>
-  {% endfor %}
   </div>
 </div>
+
+<script>
+  var links = document.querySelectorAll('.blog-index__side a');
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var cat = link.dataset.cat;
+      document.querySelectorAll('.blog-index__post').forEach(function (p) {
+        var match = cat === 'all' || p.dataset.cats.split(' ').indexOf(cat) > -1;
+        p.style.display = match ? '' : 'none';
+      });
+      links.forEach(function (l) { l.classList.toggle('active', l === link); });
+    });
+  });
+</script>
