@@ -6,3 +6,8 @@
     try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
   });
 </script>
+<script>
+  ['copy', 'cut', 'contextmenu'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) { e.preventDefault(); });
+  });
+</script>
