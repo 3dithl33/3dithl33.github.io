@@ -25,7 +25,6 @@ exclude:
 # 2. Installed Gems
 plugins:
 - jekyll-paginate
-- jekyll-seo-tag
 - jekyll-redirect-from
 - jekyll-feed
 - jekyll-commonmark
@@ -52,7 +51,6 @@ collections:
   posts:
     title: Blog # Needed for Siteleaf
     output: true
-    description: "My thoughts and ideas" # The post list page content
 
 # 6. Jekyll collections settings
 defaults:
