@@ -1,2 +1,21 @@
 <!-- Overwrite this file with code you want before the closing head tag -->
 <meta name="robots" content="noindex, nofollow">
+
+<style>
+  html.dark { background: #fff; filter: invert(1) hue-rotate(180deg); }
+  html.dark img, html.dark video, html.dark iframe { filter: invert(1) hue-rotate(180deg); }
+  #theme-toggle {
+    position: fixed; right: 16px; bottom: 16px; z-index: 999;
+    padding: 8px 14px; border: 1px solid #ccc; border-radius: 20px;
+    background: #fff; color: #222; font: 14px sans-serif; cursor: pointer;
+  }
+</style>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
