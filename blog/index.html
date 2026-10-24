@@ -1,4 +1,25 @@
 ---
-layout: blog
-collectionpage: posts
+layout: page
+title: Blog
 ---
+{% assign cats = site.categories | sort %}
+<div class="blog-index">
+  <nav class="blog-index__side">
+    <strong>Categories</strong>
+    <ul>
+    {% for cat in cats %}
+      <li><a href="#{{ cat[0] | slugify }}">{{ cat[0] }}</a> ({{ cat[1].size }})</li>
+    {% endfor %}
+    </ul>
+  </nav>
+  <div class="blog-index__main">
+  {% for cat in cats %}
+    <h2 id="{{ cat[0] | slugify }}">{{ cat[0] }}</h2>
+    <ul>
+    {% for post in cat[1] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> · {{ post.date | date: "%-d %b %Y" }}</li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+  </div>
+</div>
