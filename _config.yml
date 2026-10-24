@@ -75,11 +75,6 @@ defaults:
 encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "3dithl33" # Site name or title, also used in jekyll-seo-tag
-description:  # Site description and default description, also used in jekyll-seo-tag
-url:  # Site url, also used in jekyll-seo-tag
-baseurl: 
-repo: 
-email: 
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # date_format: "%-d %B %Y" # Blog post date formatting using placeholder formatting
 # google_analytics: ""
@@ -88,16 +83,6 @@ email:
 # short_name: "Al" # The web application short name, defaults to the site title
 css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
 
-# 8. Site favicons & manifest icons
-favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  16: '/assets/logos/logo@16px.png'
-  32: '/assets/logos/logo@32px.png'
-  96: '/assets/logos/logo@96px.png'
-  120: '/assets/logos/logo@120px.png'
-  144: '/assets/logos/logo@144px.png'
-  180: '/assets/logos/logo@180px.png'
-  512: '/assets/logos/logo@512px.png'
-  1024: '/assets/logos/logo@1024px.png'
 
 # 9. Site navigation
 navigation_header:
@@ -111,21 +96,6 @@ navigation_header:
   url: /projects/
 - title: Blog
   url: /blog/
-
-
-
-navigation_footer:
-- title: 3dithl33
-  url: 
-
-links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  LinkedIn: 
-  GitHub: 
-  Email:
-  
-  
-
-
 
 # Load custom fonts from fonts.google.com etc
 #
