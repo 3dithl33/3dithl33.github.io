@@ -86,12 +86,8 @@ css_inline: true # Will insert all styles into a single <style> block in the <he
 
 # 9. Site navigation
 navigation_header:
-- title: Home
-  url: /
-- title: About
+- title: About me
   url: /about/
-- title: CV
-  url: /cv/
 - title: Projects
   url: /projects/
 - title: Blog
