@@ -10,6 +10,12 @@
     padding: 8px 14px; border: 1px solid #ccc; border-radius: 20px;
     background: #fff; color: #222; font: 14px sans-serif; cursor: pointer;
   }
+  .blog-index { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; }
+.blog-index__side { position: sticky; top: 1rem; align-self: start; }
+@media (max-width: 700px) {
+  .blog-index { grid-template-columns: 1fr; }
+  .blog-index__side { position: static; }
+}
 </style>
 <script>
   (function () {
