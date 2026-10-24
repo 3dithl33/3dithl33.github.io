@@ -1,7 +1,7 @@
 ---
 title: Notes on Nitendogs
 categories:
-- Personal Reflection
+- Media & Culture
 ---
 Before my birthday that year, I lost my father, Nini, Niki, and maybe more.<br>
 I believe my father drowned himself in his lotus pond to enjoy the eternal summer. And according to my mother, she sent my dogs, Niki and Nini, to somewhere better. As a seven-year-old, I felt extremely calm when everything happened; Later in life, I added a footnote to this situation: how can someone even feel anything if they learned the word “obituary” before they could even write the character for “love” on their own? At the time, I had a very chaotic concept of “being dead”. Most of the time, the people around me saw it as a drastically negative thing, but, as my mom told me, puppies and Dad had gone somewhere better. Sometimes I even thought I was being punished for “being alive”, and all I wanted was to go there and meet my dogs again.<br>
